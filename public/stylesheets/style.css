@@ -13,17 +13,18 @@ header h1 {
   padding-bottom: 5px;
 }
 
-a {
+.Nav-link {
   color: #c9f5d9;
   text-decoration: none;
   margin: 2px;
 }
 
-a:hover, #logout:hover {
+.Nav-link:hover, #logout:hover {
   color: rgb(224, 245, 35);
   text-decoration: underline;
   cursor: pointer;
 }
+
 
 #logout {
   background: none;

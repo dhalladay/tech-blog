@@ -5,28 +5,22 @@
   </h2>
   <form class="edit-blog-form">
     <div>
+      <label for="blog-title">Blog Title</label>
       <input name="blog-title" type="text" value="{{blog.title}}" />
-      <span>({{format_url blog.blog_url}})</span>
+      <textarea rows="15" cols="102" wrap="hard" name="blog-body">{{blog.blog_text}}</textarea>
     </div>
     <div>
-      <a href="/blog/{{blog.id}}">{{blog.comments.length}} {{format_plural "comment" blog.comments.length}}</a>
+      <a href="/blog/{{blog.id}}"></a>
     </div>
     <button type="submit">Save blog</button>
     <button type="button" class="delete-blog-btn">Delete blog</button>
   </form>
 </article>
 
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-
+<div class="comments-div">
+  <h2>Comments: </h2>
 {{> comments blog.comments}}
+</div>
 
 <script src="/javascript/edit-blog.js"></script>
 <script src="/javascript/delete-blog.js"></script>
