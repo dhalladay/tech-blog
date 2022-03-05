@@ -16,22 +16,32 @@ header h1 {
 a {
   color: #c9f5d9;
   text-decoration: none;
+  margin: 2px;
 }
 
-a:hover {
+a:hover, #logout:hover {
   color: rgb(224, 245, 35);
   text-decoration: underline;
+  cursor: pointer;
 }
 
-  body {
-  background: #c9f5d9;
-  color: #333515;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+#logout {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+}
+
+body {
+background: #c9f5d9;
+color: #333515;
+margin: 0;
+padding: 0;
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button {
@@ -39,8 +49,12 @@ button {
   border: solid;
   border-color: #352315;
   border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.blog-buttons {
   margin: 10px;
-  padding: 0;
 }
 
 .blog-title {
@@ -56,4 +70,31 @@ button {
   text-align: left;
   margin-top: 5px;
   margin-left: 5px;
+}
+
+.comments-div, .comment {
+  border: solid;
+  border-color: #352315;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.comments-div h2 {
+  margin-top: 0;
+}
+
+.comment-form {
+  margin: 5px;
+}
+
+.comment-textarea {
+  border: solid;
+  border-color: #352315;
+  border-radius: 5px;
+}
+
+
+#comment-text-div, #comment-button {
+  float: right;
 }

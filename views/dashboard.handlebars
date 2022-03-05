@@ -17,7 +17,7 @@
 {{#if blogs.length}}
 <section>
   <h2>Your Blogs</h2>
-  <div>
+  <div id="blog-list">
     {{#each blogs as |blog|}}
       {{> blog-info blog}}
     {{/each}}
@@ -26,3 +26,4 @@
 {{/if}}
 
 <script src="/javascript/add-blog.js"></script>
+<script src="/javascript/view-blog.js"></script>
