@@ -11,13 +11,13 @@ const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const sess = {
-  secrect: process.env.SESS_SEC,
+  secret: process.env.SESSION_SECRET,
   cookie: {},
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
     db: sequelize
-  })
+  }),
 };
 
 app.use(session(sess));
@@ -31,7 +31,7 @@ app.set('view engine', 'handlebars');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.jsoin(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(require('./controllers/'));
 
