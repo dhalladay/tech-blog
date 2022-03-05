@@ -1,21 +1,25 @@
 {{> blog-info blog}}
+{{#with blog}}
+<a href="/dashboard/edit/{{id}}" class="edit-link">Edit post</a>
+{{/with}}
 
 <div class="comments-div">
   <h2>Comments: </h2>
-{{> comments blog.comments}}
+  {{> comments blog.comments}}
 </div>
 
 {{#if loggedIn}}
 <div id="comment-form-container">
-<form class="comment-form">
-  <div id="comment-text-div">
-    <textarea class="comment-textarea" rows="15" cols="102" wrap="hard" name="comment-body" placeholder="Leave a comment..."></textarea>
-  </div>
+  <form class="comment-form">
+    <div id="comment-text-div">
+      <textarea class="comment-textarea" rows="15" cols="102" wrap="hard" name="comment-body"
+        placeholder="Leave a comment..."></textarea>
+    </div>
 
-  <div>
-    <button id="comment-button" type="submit">add comment</button>
-  </div>
-</form>
+    <div>
+      <button id="comment-button" type="submit">add comment</button>
+    </div>
+  </form>
 </div>
 {{/if}}
 
