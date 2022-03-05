@@ -1,0 +1,59 @@
+header {
+  background: #352315;
+  color: #c9f5d9;
+}
+
+header nav {
+  padding-left: 10px;
+}
+
+header h1 {
+  margin: 0;
+  padding-left: 10px;
+  padding-bottom: 5px;
+}
+
+a {
+  color: #c9f5d9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(224, 245, 35);
+  text-decoration: underline;
+}
+
+  body {
+  background: #c9f5d9;
+  color: #333515;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  background-color: #c9f5d9;
+  border: solid;
+  border-color: #352315;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 0;
+}
+
+.blog-title {
+  background-color: #352315;
+  color: #c9f5d9;
+  text-align: left;
+  width: auto;
+  margin: 0;
+}
+
+.blog-text {
+  color: #352315;
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 5px;
+}
