@@ -1,0 +1,28 @@
+<section>
+  <h2>Create New Blog</h2>
+
+  <form class="new-blog-form">
+    <div>
+      <label for="blog-title">Title</label>
+      <input type="text" id="blog-title" name="blog-title" />
+    </div>
+    <div>
+      <label for="blog-text">Blog Text</label>
+      <textarea id="blog-text" name="blog-text" form="new-blog-form" rows="15" cols="102" wrap="hard" placeholder="Blog it up!"></textarea>
+    </div>
+    <button type="submit" class="btn">Create</button>
+  </form>
+</section>
+
+{{#if blogs.length}}
+<section>
+  <h2>Your Blogs</h2>
+  <div>
+    {{#each blogs as |blog|}}
+      {{> blog-info blog}}
+    {{/each}}
+  </div>
+</section>
+{{/if}}
+
+<script src="/javascript/add-blog.js"></script>
